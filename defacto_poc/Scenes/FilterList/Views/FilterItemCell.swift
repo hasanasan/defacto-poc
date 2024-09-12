@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - FilterItemCell -
 
-class FilterItemCell: UITableViewCell {
+final class FilterItemCell: UITableViewCell {
     // MARK: - Lifecycle -
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

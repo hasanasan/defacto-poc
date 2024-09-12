@@ -50,11 +50,11 @@ extension ProductListResponseModel {
         d?.doc
     }
 
-    mutating func selectCategoryFilter(categoryId: String?) {
+    mutating func toggleCategoryFilter(categoryId: String?) {
         if let filterIndex = (d?.f?.firstIndex { $0.fk == "fx_c3" }),
            let subfilterIndex = (d?.f?[filterIndex].sfi?.firstIndex { $0.i == categoryId })
         {
-            d?.f?[filterIndex].sfi?[subfilterIndex].s = true
+            d?.f?[filterIndex].sfi?[subfilterIndex].s?.toggle()
         }
     }
 
@@ -249,8 +249,8 @@ extension Doc {
     func getProductImageURLData() -> [URL]? {
         let urlData = ppic?
             .compactMap(\.ppp)
-            .compactMap { URL(string: "https://picsum.photos/376/564.jpg?item=\($0)") } ?? []
-//            .compactMap { URL(string: "\(AppConstants.CdnURL)/376/\($0)") } ?? []
+//            .compactMap { URL(string: "https://picsum.photos/376/564.jpg?item=\($0)") } ?? []
+            .compactMap { URL(string: "\(AppConstants.CdnURL)/376/\($0)") } ?? []
 
         if urlData.count <= 4 {
             return urlData

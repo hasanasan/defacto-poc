@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - SortingOptionsView -
 
-class SortingOptionsView: UIView {
+final class SortingOptionsView: UIView {
     // MARK: - Lifecycle -
 
     init() {

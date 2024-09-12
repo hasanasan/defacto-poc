@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - ProductItemCell -
 
-class ProductItemCell: UICollectionViewCell {
+final class ProductItemCell: UICollectionViewCell {
     // MARK: - Lifecycle -
 
     override init(frame: CGRect) {

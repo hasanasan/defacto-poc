@@ -8,7 +8,7 @@
 import Kingfisher
 import UIKit
 
-class ProductImageItemCell: UICollectionViewCell {
+final class ProductImageItemCell: UICollectionViewCell {
     // MARK: - Lifecycle -
 
     override init(frame: CGRect) {

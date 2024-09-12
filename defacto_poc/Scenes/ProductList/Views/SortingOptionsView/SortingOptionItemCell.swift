@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - SortingOptionItemCell -
 
-class SortingOptionItemCell: UITableViewCell {
+final class SortingOptionItemCell: UITableViewCell {
     // MARK: - Lifecycle -
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

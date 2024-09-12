@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - CategoryItemCell -
 
-class CategoryItemCell: UICollectionViewCell {
+final class CategoryItemCell: UICollectionViewCell {
     // MARK: - Lifecycle -
 
     override init(frame: CGRect) {

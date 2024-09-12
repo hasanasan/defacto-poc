@@ -27,9 +27,10 @@ final class FilterListWorker: FilterListWorkProtocol {
                         pageIndex: Int,
                         completion: RequestCompletionBlock<ProductListResponseModel>)
     {
-        let filters = filterData.map { key, value in
-            "\(key)=\(value.joined(separator: "-"))"
-        }.joined(separator: "&")
+        let filters = filterData
+            .filter { $0.key.isEmpty == false && $0.value.isEmpty == false }
+            .map { "\($0.key)=\($0.value.joined(separator: "-"))"
+            }.joined(separator: "&")
 
         let productUseCase: ProductUseCaseProtocol = ProductUseCase()
         productUseCase.fetchSearchFacet(filters: filters,

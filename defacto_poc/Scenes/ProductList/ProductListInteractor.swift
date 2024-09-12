@@ -66,11 +66,7 @@ extension ProductListInteractor: ProductListBusinessLogic, ProductListDataStore 
     func didSelectCategory(request: ProductList.List.Request) {
         pageIndex = 1
         selectedSortingOptionId = nil
-        selectedFilters.removeAll()
-
-        productListResponseModel?.clearSelectedFilters()
-        productListResponseModel?.selectCategoryFilter(categoryId: request.categoryId)
-
+        productListResponseModel?.toggleCategoryFilter(categoryId: request.categoryId)
         selectedFilters = productListResponseModel?.getSelectedFilters() ?? [:]
 
         reload()

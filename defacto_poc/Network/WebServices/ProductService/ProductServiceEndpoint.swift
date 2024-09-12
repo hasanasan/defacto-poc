@@ -31,7 +31,7 @@ enum ProductServiceEndpoint: TargetEndpointProtocol {
             }
 
             if let sortingOptionId {
-                parameterData.append(sortingOptionId)
+                parameterData.append("SortOrder=\(sortingOptionId)")
             }
 
             parameterData.append("PageSize=\(pageSize)")

@@ -28,7 +28,7 @@ protocol ProductListSectionHeaderViewDelegate: AnyObject {
 
 // MARK: - ProductListSectionHeaderView -
 
-class ProductListSectionHeaderView: UICollectionReusableView {
+final class ProductListSectionHeaderView: UICollectionReusableView {
     // MARK: - Lifecycle -
 
     override init(frame: CGRect) {
