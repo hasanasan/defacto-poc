@@ -2,10 +2,10 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/adessoTurkey/ios-boilerplate/iOS%20Build%20Check%20Workflow/develop)
 
-defacto-poc
+
 ============================
 
-This is the defacto-poc app created by Adesso Turkey.
+This is the  app created by Adesso Turkey.
 
 Table of Contents
 -----------------
